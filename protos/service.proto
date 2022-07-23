@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "chat_application/protos/message.proto";
+import "chat_application/protos/status.proto";
+
+
+service ChatService {
+    rpc SendMessage (Message) returns (Status) {}
+}

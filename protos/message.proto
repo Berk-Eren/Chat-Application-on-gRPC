@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message Message {
+    string receiver = 1;
+    string message = 2;
+}
