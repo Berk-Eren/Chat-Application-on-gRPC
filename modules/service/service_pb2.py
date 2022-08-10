@@ -12,18 +12,28 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import message_pb2 as message__pb2
-import status_pb2 as status__pb2
+import modules.message.message_pb2 as message__pb2
+import modules.message_status.message_status_pb2 as message__status__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\x1a\rmessage.proto\x1a\x0cstatus.proto21\n\x0b\x43hatService\x12\"\n\x0bSendMessage\x12\x08.Message\x1a\x07.Status\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\x1a\rmessage.proto\x1a\x14message_status.proto\"\x07\n\x05\x45mpty2c\n\x0b\x43hatService\x12+\n\x0bSendMessage\x12\x08.Message\x1a\x0e.MessageStatus\"\x00(\x01\x12\'\n\x0fretrieveMessage\x12\x06.Empty\x1a\x08.Message\"\x00\x30\x01\x62\x06proto3')
 
 
+
+_EMPTY = DESCRIPTOR.message_types_by_name['Empty']
+Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), {
+  'DESCRIPTOR' : _EMPTY,
+  '__module__' : 'service_pb2'
+  # @@protoc_insertion_point(class_scope:Empty)
+  })
+_sym_db.RegisterMessage(Empty)
 
 _CHATSERVICE = DESCRIPTOR.services_by_name['ChatService']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _CHATSERVICE._serialized_start=46
-  _CHATSERVICE._serialized_end=95
+  _EMPTY._serialized_start=54
+  _EMPTY._serialized_end=61
+  _CHATSERVICE._serialized_start=63
+  _CHATSERVICE._serialized_end=162
 # @@protoc_insertion_point(module_scope)

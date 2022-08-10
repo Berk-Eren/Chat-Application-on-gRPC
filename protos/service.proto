@@ -1,9 +1,12 @@
 syntax = "proto3";
 
 import "message.proto";
-import "status.proto";
+import "message_status.proto";
+
+message Empty {}
 
 
 service ChatService {
-    rpc SendMessage (Message) returns (Status) {}
+    rpc SendMessage (stream Message) returns (MessageStatus) {}
+    rpc retrieveMessage (Empty) returns (stream Message) {}
 }
