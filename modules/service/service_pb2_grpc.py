@@ -2,9 +2,9 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from modules.message import message_pb2 as message__pb2
-from modules.message_status import message_status_pb2 as message__status__pb2
-from . import service_pb2 as service__pb2
+import modules.message.message_pb2 as message__pb2
+import modules.message_status.message_status_pb2 as message__status__pb2
+import modules.service.service_pb2 as service__pb2
 
 
 class ChatServiceStub(object):
